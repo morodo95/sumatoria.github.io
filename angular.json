@@ -23,9 +23,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/style.css",
+              "src/assets/vendor/bootstrap/css/bootstrap-grid.css",
+              "src/assets/vendor/bootstrap/css/bootstrap-reboot.css",
+              "src/assets/vendor/bootstrap/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendor/jquery/jquery.min.js",
+              "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/vendor/jquery/jquery.min.js",
+              "src/assets/vendor/jquery/jquery.slim.min.js"
+            ]
           },
           "configurations": {
             "production": {
