@@ -7,6 +7,14 @@ import { FooterComponent } from './componente/footer/footer.component';
 import { HeaderComponent } from './componente/header/header.component';
 import { InversorComponent } from './componente/inversor/inversor.component';
 import { InicioComponent } from './componente/inicio/inicio.component';
+import { ModalModule } from 'ngb-modal';
+import { ComoLoHacemosComponent } from './componente/como-lo-hacemos/como-lo-hacemos.component';
+import { EquipoComponent } from './componente/equipo/equipo.component';
+import { MisInversionesComponent } from './componente/mis-inversiones/mis-inversiones.component';
+import { PagadoComponent } from './componente/pagado/pagado.component';
+import { PasoAPasoComponent } from './componente/paso-a-paso/paso-a-paso.component';
+import { PerfilComponent } from './componente/perfil/perfil.component';
+import { ProyectosComponent } from './componente/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +22,19 @@ import { InicioComponent } from './componente/inicio/inicio.component';
     FooterComponent,
     HeaderComponent,
     InversorComponent,
-    InicioComponent
+    InicioComponent,
+    ComoLoHacemosComponent,
+    EquipoComponent,
+    MisInversionesComponent,
+    PagadoComponent,
+    PasoAPasoComponent,
+    PerfilComponent,
+    ProyectosComponent
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

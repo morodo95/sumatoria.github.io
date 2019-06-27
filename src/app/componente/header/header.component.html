@@ -1,37 +1,60 @@
 <header>
   <nav>
     <div class="boxlogo"><a href="index.html"><img src="/assets/img/logo.png" alt="Logo Sumatoria"></a></div>
-
+    
     <div class="contenedormenu">
       <div class="boxusuario">
-        <div class="usuario"><img src="/assets/img/usuario.png" alt="Icono Usuario"></div>
+        <div class="usuario menu1">
+          <ul class="boxhidden">
+            <li>
+              <a href="#" class="boxhiddena"><img src="/assets/img/usuario.png" alt="Icono Usuario"><i class="fa fa-sort-down"></i></a>
+              <ul class="hidden">
+                    <li class="itemsubmenu"><a href="perfil.html">Perfil</a></li>
+                    <li class="itemsubmenu"><a href="misinversiones.html">Inversion</a></li>
+                    <li class="itemsubmenu"><a href="#">Cerrar Sesión</a></li>
+                  </ul>
+            </li>
+          </ul>
+        </div>
         <div class="corazon">
           <img src="/assets/img/corazon.png" alt="Icono Corazon">
-          <div class="numerador">
-            <p>0</p>
-          </div>
+          <div class="numerador"><p>0</p></div>
         </div>
         <div class="divisor"></div>
       </div>
 
       <div class="container2 menu1">
-        <div class="phone">
-          <div class="content2">
+            <div class="phone">
+              <div class="content2">
             <div id="menuToggle">
-              <input type="checkbox" />
-              <span></span>
-              <span style="top:7px;"></span>
-              <span style="top:14px;"></span>
+                    <input type="checkbox" />
+                        <span></span>
+                        <span style="top:7px;"></span>
+                        <span style="top:14px;"></span>
               <ul id="menu">
-                <li><button class="btn1"><a href="inversion.html">Invertí</a></button></li>
-                <li><a href="" class="opcionmenu">Como funciona</a></li>
-                <li><a href="" class="opcionmenu">Sobre nosotros</a></li>
-                <li><a href="" class="opcionmenu">Contactanos</a></li>
+                <li><a href="inversion.html"><button class="btn1">Invertí</button></a></li>
+                <li>
+                  <a href="#" class="opcionmenu paddingml">Como funciona <i class="fa fa-sort-down"></i></a>
+                  <ul>
+                        <li class="itemsubmenu"><a href="comolohacemos.html">Como lo hacemos</a></li>
+                        <li class="itemsubmenu"><a href="pasoapaso.html">Paso a paso</a></li>
+                      </ul>
+                </li>
+                <li>
+                  <a href="#" class="opcionmenu paddingml">Sobre nosotros <i class="fa fa-sort-down"></i></a>
+                  <ul>
+                        <li class="itemsubmenu"><a href="equipo.html">Nuestro equipo</a></li>
+                      </ul>
+                </li>
+                <li><a href="contacto.html" class="opcionmenu">Contactanos</a></li>
+                <li class="displayn3"><a href="perfil.html" class="opcionmenu">Perfil</a></li>
+                      <li class="displayn3"><a href="misinversiones.html" class="opcionmenu">Inversion</a></li>
+                      <li class="displayn3"><a href="#" class="opcionmenu">Cerrar Sesión</a></li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
+      </div>	
     </div>
   </nav>
 </header>

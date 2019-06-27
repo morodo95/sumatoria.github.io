@@ -37,10 +37,10 @@
       <div class="compartir">
         <p>Compartilo para llegar a más personas</p>
         <div class="boxredes2">
-          <img src="/assets/img/redes-08.png" alt="" class="redesimg1">
-          <img src="/assets/img/redes-07.png" alt="" class="redesimg2">
-          <img src="/assets/img/redes-06.png" alt="" class="redesimg2">
-          <img src="/assets/img/redes-05.png" alt="" class="redesimg2">
+          <img src="/assets/img/redes-08.png" alt="" class="redesimg1" (click)="abrirShare('https://web.whatsapp.com/send?text=https%3A%2F%2Fwww.sharethis.com%2F')">
+          <!-- <img src="/assets/img/redes-07.png" alt="" class="redesimg2"> -->
+          <img src="/assets/img/redes-06.png" alt="" class="redesimg2" (click)="abrirShare('https://twitter.com/intent/tweet?text=ShareThis%3A%20Free%20Social%20Share%20Buttons%20%26%20Plugins%20for%20Websites%20%26%20Blogs&url=https%3A%2F%2Fsharethis.com%2F')">
+          <img src="/assets/img/redes-05.png" alt="" class="redesimg2" (click)="abrirShare('https://www.facebook.com/sharer.php?t=El%20tomi%20es%20puto&u=http://www.tomiputo.com&output=embed')">
         </div>
       </div>
     </div>
@@ -195,3 +195,9 @@
     decidió a hacer la inversión y asi se animó a comenzar su proyecto. Al principio conoció la técnica de verificación
     y luego la definitiva que elegiría para sus trabajos; la de calcos vitrificables.</p>
 </section>
+
+<modal #share>
+  <modal-content>
+    <iframe [src]="linkModal" width="100%" height="500px"></iframe>
+  </modal-content>
+</modal>
