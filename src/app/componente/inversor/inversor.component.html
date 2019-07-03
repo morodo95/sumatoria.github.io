@@ -169,9 +169,9 @@
           <input type="checkbox" name="radio2">
           <span class="checkmark tr2"></span>
         </label>
-        <p>Acepto <a href="">Términos y Condiciones</a></p>
+        <p>Acepto <a inlineHref="#modal1">Términos y Condiciones</a></p>
       </div>
-      <button class="btn7">Invertí</button>
+      <a inlineHref="#modal2"><button class="btn7">Invertí</button></a>
     </div>
 
     <div class="box1 inversion9 displayn2">
@@ -201,3 +201,77 @@
     <iframe [src]="linkModal" width="100%" height="500px"></iframe>
   </modal-content>
 </modal>
+
+<div id="modal1" class="modal_mask">
+  <div class="box-modal1">
+    <div class="box1">
+      <a inlineHref="#"><img class="cerrarmodal" src="/assets/img/cerrar.png" alt=""></a>
+    </div>
+    <div class="box1">
+      <h2>Solicitud de adquisición de crédito</h2>
+      <p class="small1">Ciudad Autónoma de Buenos Aires, 23 de Enero de 2019</p>
+    </div>
+    <div class="box1">
+      <p style="margin-bottom:2px;"><strong>Estimado/a Lucas Morsellino</strong></p>
+      <p style="margin-bottom:38px;">De nuestra consideración:</p>
+      <p>De acuerdo con los Términos y Condiciones del Programa publicados en el Sitio, el Usuario registrado en el Sitio Web, mediante acceso a su cuenta con su nombre de usuario y contraseña, y que efectúa el click de aceptación al pie, se dirige al Administrador, en virtud del Mandato otorgado a éste por la IMF seleccionada por el Usuario que se indica en el encabezado de la presente, con el objeto de ofrecer a la IMF (a través del Administrador) la adquisición del Crédito seleccionado que se indica en el encabezado de la presente, en la proporción y con la tasa de interés que allí se indica. A tal ﬁn les hacemos llegar las condiciones sobre cuya base ofrecemos su contratación en virtud de los términos y condiciones detallados a continuación.</p>
+    </div>
+    <div class="box1">
+      <div class="detalles">
+        <h4>Detalles del préstamo</h4>
+        <p>Nombre de Inversor: <span>Lucas Morsellino </span></p>
+        <p>Nro de Crédito: <span>259</span></p>
+        <p>Microempresario: <span>Julia González </span></p>
+        <p>Microempremdimiento: <span>Mi Sacrificio</span></p>
+        <p>IMF: <span>Asociación Civil Nuestras Huellas </span></p>
+        <p>Proporción a Adquirir: <span>2,08 %</span></p>
+        <p>Valor Nominal a Adquirir: <span>$5.000</span></p>
+        <p>Tasa de Interés Nominal Anual (TNA): <span>30%</span></p>
+        <p>Tasa de Interés Efectiva (TEA): <span>30%</span></p>
+        <p>Plazo al vencimiento: <span>23/07/2019</span></p>
+        <p>Interés a recibir: <span>$1.500</span></p>
+        <p>Monto a devolver: <span>$6.500</span></p>
+      </div>
+    </div>
+    <div class="box1" style="margin-bottom:33px;">
+      <p style="margin-bottom:33px;">Todos los términos que comiencen con letra mayúscula y que no estuvieran deﬁnidos en la presente, tienen el signiﬁcado asignado a los mismos en los Términos y Condiciones del Programa.</p>
+      <p>1. Sujeto a los Términos y Condiciones del Programa y a las condiciones establecidas en la presente, y siempre y cuando esta Solicitud de Adquisición sea aceptada por el Administrador (por cuenta y orden de la IMF), el Usuario adquiere a la IMF el Crédito (por la proporción y tasa de interés indicadas en el encabezamiento de la presente) y ésta acepta venderlo (en dicha proporción) de plena conformidad.</p>
+      <p>2. El precio de adquisición del Crédito será el que se indica en el encabezado de la presente. La forma de pago del precio será la indicada en los Términos y Condiciones.</p>
+      <p>3. La recepción sin rechazo de dicho pago y la conﬁrmación, a través del Sitio, de la adquisición realizada, signiﬁcará la aceptación de todos los términos y condiciones de la presente Solicitud de Adquisición por el Administrador (en representación de la IMF).</p>
+      <p>4. El Usuario podrá efectuar una impresión de la conﬁrmación emitida por el Sitio y podrá conservar dicha constancia en su poder.</p>
+      <p>5. Previo a la emisión de esta Solicitud de Adquisición, el Usuario analizó el Crédito y el Microempresario y Microemprendimiento asociados, a través de la información publicada en el Sitio.</p>
+      <p>6. La cesión y adquisición del Crédito se regirá por los Términos y Condiciones aceptados por el Usuario al momento de registrarse en el Sitio, los cuales se encuentran publicados en el Sitio.</p>
+    </div>
+    <a inlineHref="#"><button class="btn8">Cerrar</button></a>
+  </div><!-- box-modal==== -->
+</div>	
+
+<div id="modal2" class="modal_mask">
+  <div class="box-modal2">
+    <div class="box1">
+      <a inlineHref="#"><img class="cerrarmodal" src="/assets/img/cerrar.png" alt=""></a>
+    </div>
+    <div class="box1">
+      <h2>Ya casi terminamos Lucas...</h2>
+      <p style="text-align:center;">Elegí por que medio queres realizar tu inversión.</p>
+    </div>
+    <div class="box1">
+      <div class="boxpago">
+        <div class="boxpagoindi">
+          <div class="pago"><a href=""><img src="/assets/img/pago-01.png" alt=""></a></div>
+          <p style="font-weight:600; margin-bottom:5px;">Mercado Pago</p>
+          <p style="font-size:10px;">Tarjetas credito - debito</p>
+        </div>
+        <p class="boxpagop">ó</p>
+        <div class="boxpagoindi">
+          <div class="pago"><a href=""><img src="/assets/img/pago-02.png" alt=""></a></div>
+          <p style="font-weight:600;">Transferencia bancaria(*)</p>
+        </div>
+      </div>
+    </div>
+    <div class="box1" style="margin-bottom:33px;">
+      <p style="font-size: 14px; line-height: 18px;">(*) La transferencia bancaria deberá ser realizada por el usuario a traves de la plataforma de homebanking de su banco. Una vez que ingrese el pago un email de conﬁmación notiﬁcará el exito de la trasnacción.</p>
+    </div>
+    <a inlineHref="#"><button class="btn8">Cerrar</button></a>
+  </div><!-- box-modal==== -->
+</div>

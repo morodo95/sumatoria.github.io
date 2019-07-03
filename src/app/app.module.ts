@@ -15,6 +15,7 @@ import { PagadoComponent } from './componente/pagado/pagado.component';
 import { PasoAPasoComponent } from './componente/paso-a-paso/paso-a-paso.component';
 import { PerfilComponent } from './componente/perfil/perfil.component';
 import { ProyectosComponent } from './componente/proyectos/proyectos.component';
+import { InlineHrefDirective } from 'ng-inline-href';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,16 @@ import { ProyectosComponent } from './componente/proyectos/proyectos.component';
     PagadoComponent,
     PasoAPasoComponent,
     PerfilComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    InlineHrefDirective
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     ModalModule
+  ],
+  exports: [
+    InlineHrefDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
