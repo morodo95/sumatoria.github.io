@@ -16,6 +16,7 @@ import { PasoAPasoComponent } from './componente/paso-a-paso/paso-a-paso.compone
 import { PerfilComponent } from './componente/perfil/perfil.component';
 import { ProyectosComponent } from './componente/proyectos/proyectos.component';
 import { InlineHrefDirective } from 'ng-inline-href';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { InlineHrefDirective } from 'ng-inline-href';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    ModalModule
+    ModalModule,
+    HttpClientModule
   ],
   exports: [
     InlineHrefDirective

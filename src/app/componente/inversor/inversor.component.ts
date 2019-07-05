@@ -17,11 +17,8 @@ export class InversorComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer, private modalService: ModalManager,
     private router: ActivatedRoute) { }
 
-  ngOnInit() {
-    console.log(this.router.snapshot.paramMap.get('id'));
-    // CAPTURA ID
-    // DEBERIA BUSCAR POR ID EN LA BASE DE DATOS
-  }
+    ngOnInit() {
+    }
 
   abrirShare(link: string) {
     this.linkModal = this.sanitizer.bypassSecurityTrustResourceUrl(link);
