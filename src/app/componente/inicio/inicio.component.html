@@ -1,0 +1,431 @@
+<section class="personaliza">
+  <div class="personaliza2">
+    <img src="/assets/img/fondo.png" alt="">
+  </div>
+  <div class="personaliza3">
+    <p>El futuro del planeta está en tus manos. Invertí con <span>impacto</span></p>
+    <h1>Te ofrecemos invertir en proyectos y empresas que impactan positivamente en la sociedad y el planeta.</h1>
+    <button class="btn3">Conocé más</button>
+  </div>
+</section>
+
+<section class="sectionmobile displayn2">
+  <div class="boxsm">
+    <button class="btn5">Ingresar</button>
+    <button class="btn6">Registrate</button>
+  </div>
+</section>
+
+<section class="nosotros">
+  <h1>Nosotros cuidamos tu dinero porque somos consciente de su poder de transformación.</h1>
+
+  <div class="boxnosotros">
+    <div class="indiviudaln">
+      <div class="indiviudalninfo">
+        <img src="/assets/img/nosotros.png" alt="">
+        <h2>Buenos financieros</h2>
+        <p>Hablamos de <span>rentabilidad</span> en inversiones que su vez tienen un <span>impacto positivo real</span>
+          en las personas y el planta. Podés personalizar tu inversión con una <span>tasa (TNA) de hasta el 35%.</span></p>
+      </div>
+      <button class="btn3">Conocé más</button>
+    </div>
+
+    <div class="indiviudaln">
+      <div class="indiviudalninfo">
+        <img src="/assets/img/nosotros.png" alt="">
+        <h2>Al servicio</h2>
+        <p>100% de devoluciones en más de 8 años</p>
+      </div>
+      <button class="btn3">Conocé más</button>
+    </div>
+
+    <div class="indiviudaln">
+      <div class="indiviudalninfo">
+        <img src="/assets/img/nosotros.png" alt="">
+        <h2>De confianza</h2>
+        <p>Nuestra alianza con MercadoPago garantiza transacciones de alta seguridad.</p>
+      </div>
+      <button class="btn3">Conocé más</button>
+    </div>
+  </div>
+</section>
+
+<section class="proyectos">
+  <div class="box1">
+    <h1>Conocé los proyectos con impacto positivo que seleccionamos para que puedas invertir.</h1>
+    <p class="subtitulo1">Conectamos inversores conscientes con emprendedores y empresas sociales que impactan
+      positivamente.</p>
+
+    <div class="boxproyectos">
+      <div class="boxpindividual" *ngFor="let proyecto of proyectos">
+        <h4>Nos faltan $12.000</h4>
+        <div class="barra">
+          <div class="porcentaje"></div>
+        </div>
+        <div class="pindividual">
+          <div class="imgproyecto">
+            <img *ngIf="proyecto.foto_emprendimiento == ''" src="/assets/img/proyecto1.jpg" alt="">
+            <img *ngIf="proyecto.foto_emprendimiento != ''" [src]="imagen(proyecto.foto_emprendimiento)">
+          </div>
+          <div class="textosproyectos">
+            <h2>{{ proyecto.nombre_comercio }}</h2>
+            <p *ngIf="proyecto.descripcion != null">
+              {{ proyecto.descripcion }} <span *ngIf="proyecto.sexo == 'F'">Invertí en ella!</span><span *ngIf="proyecto.sexo == 'M'">Invertí en él!</span>
+            </p>
+            <p *ngIf="proyecto.descripcion == null">
+              NO HAY DESCRIPCIÓN. <span *ngIf="proyecto.sexo == 'F'">Invertí en ella!</span><span *ngIf="proyecto.sexo == 'M'">Invertí en él!</span>
+            </p>
+          </div>
+          <div class="boxbtnp">
+            <a href="/proyecto/{{ proyecto.id_micro }}">
+              <button class="btn1">Conocé más</button>
+            </a>
+            <img src="/assets/img/corazon.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box1 btnvmp">
+    <a href="/proyectos">
+      <button class="btn4">Ver más proyectos</button>
+    </a>
+  </div>
+</section>
+
+<section class="funcion">
+  <div class="box1">
+    <h1>Te contamos cómo funciona nuestra plataforma de financiamiento colectivo.</h1>
+    <p class="subtitulo2">Simple y fácil, con tan solo 5 pasos podés invertir por una nueva economía.</p>
+
+
+    <div class="boxfuncion">
+
+
+      <div class="tabordion">
+        <div id="section1">
+          <input type="radio" name="sections" id="option1" checked>
+          <label for="option1">
+            <h1>1<span>. Elegí a quien financiar</span></h1>
+          </label>
+          <article>
+            <h4>Elegí a quien financiar</h4>
+            <p>En Sumatoria seleccionamos a partir de un cuidadoso proceso de evaluación diferentes proyectos con
+              impacto que necesitan de tu inversión para poder seguir desarrollándose sanamente.</p>
+            <p>Simplemente elegí qué proyecto te interesa financiar, podes analizar los límites de las tasas de interés
+              que cada proyecto propone, el área de trabajo y los sectores en los que el proyecto impacta
+              positivamente.</p>
+            <p>También recordó que invirtiendo a traves de nuestra plataforma estás contribuyendo con los objetivos de
+              desarrollo sostenible (ODS) planteados por la Organización de las Naciones Unidas en 2015.</p>
+          </article>
+        </div>
+        <div id="section2">
+          <input type="radio" name="sections" id="option2">
+          <label for="option2" class="sl2">
+            <h1>2<span>. Invertí tu dinero por el bien común</span></h1>
+          </label>
+          <article>
+            <h4>Invertí tu dinero por el bien común</h4>
+            <p>Sir James Paul McCartney, (born 18 June 1942), is an English musician, singer, songwriter,
+              multi-instrumentalist, and composer. With John Lennon, George Harrison and Ringo Starr, he gained
+              worldwide fame as a member of the Beatles, widely regarded as one of the most popular and influential
+              acts in the history of rock music; his songwriting partnership with Lennon is one of the most celebrated
+              of the 20th century. After the band's break-up, he pursued a solo career and later formed Wings with his
+              first wife, Linda, and Denny Laine.</p>
+          </article>
+        </div>
+        <div id="section3">
+          <input type="radio" name="sections" id="option3">
+          <label for="option3" class="sl3">
+            <h1>3<span>. Conocé el impacto que generás con tu inversión</span></h1>
+          </label>
+          <article>
+            <h4>Conocé el impacto que generás con tu inversión</h4>
+            <p>George Harrison, (25 February 1943 – 29 November 2001), was an English musician, multi-instrumentalist,
+              singer and songwriter who achieved international fame as the lead guitarist of the Beatles. Although John
+              Lennon and Paul McCartney were the band's primary songwriters, most of their albums included at least one
+              Harrison composition, including "While My Guitar Gently Weeps", "Here Comes the Sun" and "Something",
+              which became the Beatles' second-most-covered song.</p>
+          </article>
+        </div>
+        <div id="section4">
+          <input type="radio" name="sections" id="option4">
+          <label for="option4" class="sl4">
+            <h1>4<span>. Obtené doble retorno; rentabilidad y consciencia</span></h1>
+          </label>
+          <article>
+            <h4>Obtené doble retorno; rentabilidad y consciencia</h4>
+            <p>Richard Starkey, (born 7 July 1940), better known by his stage name Ringo Starr, is an English musician,
+              singer, songwriter, and actor who gained worldwide fame as the drummer for The Beatles. On most of the
+              band's albums, he sang lead vocals for one song, including "With a Little Help from My Friends", "Yellow
+              Submarine" and their cover of "Act Naturally". He also wrote the Beatles' songs "Don't Pass Me By" and
+              "Octopus's Garden", and is credited as a co-writer of others, such as "What Goes On" and "Flying".</p>
+          </article>
+        </div>
+        <div id="section5">
+          <input type="radio" name="sections" id="option5">
+          <label for="option5" class="sl5">
+            <h1>5<span>. Retirá tu dinero o volvé a invertir</span></h1>
+          </label>
+          <article>
+            <h4>Retirá tu dinero o volvé a invertir</h4>
+            <p>Richard Starkey, (born 7 July 1940), better known by his stage name Ringo Starr, is an English musician,
+              singer, songwriter, and actor who gained worldwide fame as the drummer for The Beatles. On most of the
+              band's albums, he sang lead vocals for one song, including "With a Little Help from My Friends", "Yellow
+              Submarine" and their cover of "Act Naturally". He also wrote the Beatles' songs "Don't Pass Me By" and
+              "Octopus's Garden", and is credited as a co-writer of others, such as "What Goes On" and "Flying".</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box1 btnvmp2">
+    <button class="btn4">Conocé más</button>
+  </div>
+</section>
+
+<section class="numeros">
+  <div class="box1">
+    <h1>Hace 8 años que trabajamos por una economía sostenible.</h1>
+    <div class="boxnumeros">
+      <div class="nindividual">
+        <img src="/assets/img/contador-01.png" alt="">
+        <div class="contador">
+          <h1>177</h1>
+          <h4>Inversores conscientes</h4>
+          <p>Inversores ya son parte</p>
+          <p>de esta red que está</p>
+          <p>transformando la economía.</p>
+        </div>
+      </div>
+
+      <div class="nindividual">
+        <img src="/assets/img/contador-02.png" alt="">
+        <div class="contador">
+          <h1>2.3 M</h1>
+          <h4>Inversión de impacto</h4>
+          <p>Pesos invertidos</p>
+          <p>por un mundo más justo</p>
+          <p>y saludable.</p>
+        </div>
+      </div>
+
+      <div class="nindividual">
+        <img src="/assets/img/contador-03.png" alt="">
+        <div class="contador">
+          <h1>225</h1>
+          <h4>Proyectos financiados</h4>
+          <p>Proyectos financiados</p>
+          <p>que han mejorado la calidad</p>
+          <p>de vida de miles de personas.</p>
+        </div>
+      </div>
+
+      <div class="nindividual">
+        <img src="/assets/img/contador-04.png" alt="">
+        <div class="contador">
+          <h1>100%</h1>
+          <h4>Tasa de devolución</h4>
+          <p>De las inversiones</p>
+          <p>fueron devueltas</p>
+          <p>en su totalidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="aliados">
+  <div class="box1">
+    <h1>Muchos son los que nos acompañan en este camino por una nueva economía</h1>
+    <div class="boxaliados displayn">
+      <div id="carouselExampleIndicators" class="carousel slide slider1" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active puntos"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1" class="puntos"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2" class="puntos"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="">
+            <div class="columna1">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+              <img src="/assets/img/aliados-03.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+              <img src="/assets/img/aliados-06.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-07.png" alt="">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-03.png" alt="">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="">
+            <div class="columna1">
+              <img src="/assets/img/aliados-07.png" alt="">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-03.png" alt="">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+              <img src="/assets/img/aliados-03.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+              <img src="/assets/img/aliados-06.png" alt="">
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="">
+            <div class="columna1">
+              <img src="/assets/img/aliados-03.png" alt="">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+              <img src="/assets/img/aliados-03.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+              <img src="/assets/img/aliados-06.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-07.png" alt="">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="boxaliados displayn2">
+      <div id="carouselExampleIndicators2" class="carousel slide slider1" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active puntos"></li>
+          <li data-target="#carouselExampleIndicators2" data-slide-to="1" class="puntos"></li>
+          <li data-target="#carouselExampleIndicators2" data-slide-to="2" class="puntos"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="">
+            <div class="columna1">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-07.png" alt="">
+              <img src="/assets/img/aliados-01.png" alt="">
+            </div>
+          </div>
+
+          <div class="carousel-item" style="">
+            <div class="columna1">
+              <img src="/assets/img/aliados-07.png" alt="">
+              <img src="/assets/img/aliados-01.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-03.png" alt="">
+              <img src="/assets/img/aliados-04.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+            </div>
+          </div>
+
+          <div class="carousel-item" style="">
+            <div class="columna1">
+              <img src="/assets/img/aliados-03.png" alt="">
+              <img src="/assets/img/aliados-04.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-01.png" alt="">
+              <img src="/assets/img/aliados-02.png" alt="">
+            </div>
+            <div class="columna1">
+              <img src="/assets/img/aliados-04.png" alt="">
+              <img src="/assets/img/aliados-05.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="testimonios">
+  <div class="box1">
+    <h1>Algunos de ellos compartieron su mensaje...</h1>
+    <div class="boxtestimonios">
+      <div id="carouselExample" class="carousel slide slider2" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExample" data-slide-to="0" class="active puntos"></li>
+          <li data-target="#carouselExample" data-slide-to="1" class="puntos"></li>
+          <li data-target="#carouselExample" data-slide-to="2" class="puntos"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active testimonio" style="">
+            <img src="/assets/img/persona.png" alt="">
+            <h3>Nati Brzorza, Inversora</h3>
+            <p>“Muchos tenemos el potencial y la capacidad para desempeñar y llevar adelante un emprendimiento, pero no
+              contamos con el capital inicial para poder activarlo. El capital que pueda sacar de esa situación de
+              vulnerabilidadante la realidad socio económica en la cual vivimos”.</p>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item testimonio" style="">
+            <img src="/assets/img/persona.png" alt="">
+            <h3>Nati Brzorza, Inversora</h3>
+            <p>“Muchos tenemos el potencial y la capacidad para desempeñar y llevar adelante un emprendimiento, pero no
+              contamos con el capital inicial para poder activarlo. El capital que pueda sacar de esa situación de
+              vulnerabilidadante la realidad socio económica en la cual vivimos”.</p>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item testimonio" style="">
+            <img src="/assets/img/persona.png" alt="">
+            <h3>Nati Brzorza, Inversora</h3>
+            <p>“Muchos tenemos el potencial y la capacidad para desempeñar y llevar adelante un emprendimiento, pero no
+              contamos con el capital inicial para poder activarlo. El capital que pueda sacar de esa situación de
+              vulnerabilidadante la realidad socio económica en la cual vivimos”.</p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon arrow1" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+          <span class="carousel-control-next-icon arrow2" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

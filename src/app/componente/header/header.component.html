@@ -1,0 +1,65 @@
+<header>
+  <nav>
+    <div class="boxlogo"><a href="/"><img src="/assets/img/logo.png" alt="Logo Sumatoria"></a></div>
+    
+    <div class="contenedormenu">
+      <div class="boxusuario">
+        <div class="usuario menu1">
+          <ul class="boxhidden">
+            <li *ngIf="usuario != null">
+              <a style="cursor: default;" class="boxhiddena">
+                <img src="/assets/img/usuario.png" alt="Icono Usuario">
+                <i class="fa fa-sort-down"></i>
+              </a>
+              <ul class="hidden">
+                    <li class="itemsubmenu"><a href="/perfil">Perfil</a></li>
+                    <li class="itemsubmenu"><a href="/mis-inversiones">Inversion</a></li>
+                    <li class="itemsubmenu"><a style="cursor: pointer;" (click)="logout()">Cerrar Sesión</a></li>
+                  </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="corazon" *ngIf="usuario != null">
+          <img src="/assets/img/corazon.png" alt="Icono Corazon">
+          <div class="numerador"><p>0</p></div>
+        </div>
+        <div class="divisor" *ngIf="usuario != null"></div>
+      </div>
+
+      <div class="container2 menu1">
+            <div class="phone">
+              <div class="content2">
+            <div id="menuToggle">
+                    <input type="checkbox" />
+                        <span></span>
+                        <span style="top:7px;"></span>
+                        <span style="top:14px;"></span>
+              <ul id="menu">
+                <li *ngIf="usuario != null"><a href="inversion.html"><button class="btn1">Invertí</button></a></li>
+                <li>
+                  <a style="cursor: default;"  class="opcionmenu paddingml">Como funciona <i class="fa fa-sort-down"></i></a>
+                  <ul>
+                        <li class="itemsubmenu"><a href="/como-lo-hacemos">Como lo hacemos</a></li>
+                        <li class="itemsubmenu"><a href="/paso-a-paso">Paso a paso</a></li>
+                      </ul>
+                </li>
+                <li>
+                  <a style="cursor: default;" class="opcionmenu paddingml">Sobre nosotros <i class="fa fa-sort-down"></i></a>
+                  <ul>
+                        <li class="itemsubmenu"><a href="/equipo">Nuestro equipo</a></li>
+                      </ul>
+                </li>
+                <li><a href="contacto.html" class="opcionmenu">Contactanos</a></li>
+                <li class="displayn3" *ngIf="usuario != null">
+                  <a href="/perfil" class="opcionmenu">Perfil</a>
+                </li>
+                <li class="displayn3" *ngIf="usuario != null"><a href="/mis-inversiones" class="opcionmenu">Inversion</a></li>
+                <li class="displayn3" *ngIf="usuario != null"><a href="#" class="opcionmenu">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </div>
+  </nav>
+</header>

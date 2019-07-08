@@ -1,0 +1,279 @@
+<section class="inversion">
+  <div class="ancho50 ">
+    <div>
+      <h4>Nos faltan $12.000</h4>
+      <div class="barra">
+        <div class="porcentaje"></div>
+      </div>
+    </div>
+    <div class="box1">
+      <div class="inversion1">
+        <img *ngIf="proyecto?.foto_emprendimiento == ''" src="/assets/img/inversionista.png" alt="">
+        <img *ngIf="proyecto?.foto_emprendimiento != ''" [src]="imagen(proyecto?.foto_emprendimiento)">
+      </div>
+      <div class="inversion2">
+        <h2>Una máquina nueva para Griselda</h2>
+        <div>
+          <p>Nombre: {{ proyecto?.nombre + ' ' + proyecto?.apellido }}</p>
+          <p>Rubro: {{ proyecto?.rubro }}</p>
+          <p>Necesidad: -----</p>
+          <p>Acompaña: {{ proyecto?.nombre_comercio }}</p>
+          <p>Ubicación: {{ proyecto?.provincia + ', ' + proyecto?.pais_iso}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="box1 inversion3">
+      <p>{{ proyecto?.descripcion }}</p>
+    </div>
+    <div class="box1">
+      <div class="corazon2">
+        <img src="/assets/img/corazon.png" alt="Icono Corazon">
+        <div class="numerador">
+          <p>+</p>
+        </div>
+      </div>
+      <div class="inversionp">¿Querés agregar este proyecto a tus favoritos?
+      </div>
+    </div>
+    <div class="box1 displayn">
+      <div class="compartir">
+        <p>Compartilo para llegar a más personas</p>
+        <div class="boxredes2">
+          <img src="/assets/img/redes-08.png" style="cursor: pointer;" alt="" class="redesimg1" (click)="abrirShare('https://web.whatsapp.com/send?text=https%3A%2F%2Fwww.sharethis.com%2F')">
+          <!-- <img src="/assets/img/redes-07.png" alt="" class="redesimg2"> -->
+          <img src="/assets/img/redes-06.png" style="cursor: pointer;" alt="" class="redesimg2" (click)="abrirShare('https://twitter.com/intent/tweet?text=ShareThis%3A%20Free%20Social%20Share%20Buttons%20%26%20Plugins%20for%20Websites%20%26%20Blogs&url=https%3A%2F%2Fsharethis.com%2F')">
+          <img src="/assets/img/redes-05.png" style="cursor: pointer;" alt="" class="redesimg2" (click)="abrirShare('https://www.facebook.com/sharer.php?t=El%20tomi%20es%20puto&u=http://www.tomiputo.com&output=embed')">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ancho50">
+    <div class="box1">
+      <div class="inversion4">
+        <div class="inversion4a paddingr1">
+          <p>¿Cuánto vas a invertir? (AR$)</p>
+          <input type="text" placeholder="$1000" class="inversioninput">
+        </div>
+        <div class="inversion4b paddingr2">
+          <p>¿A qué tasa?</p>
+          <select name="" id="" class="inversionselect">
+            <option value="">%5</option>
+            <option value="">%10</option>
+            <option value="">%15</option>
+            <option value="">%20</option>
+            <option value="">%25</option>
+            <option value="">%30</option>
+            <option value="">%35</option>
+            <option value="">%40</option>
+            <option value="">%45</option>
+            <option value="">%50</option>
+            <option value="">%55</option>
+            <option value="">%60</option>
+            <option value="">%65</option>
+            <option value="">%70</option>
+            <option value="">%75</option>
+            <option value="">%80</option>
+            <option value="">%85</option>
+            <option value="">%90</option>
+            <option value="">%95</option>
+            <option value="">%100</option>
+          </select>
+        </div>
+      </div>
+      <div class="inversion5 paddingi5a">
+        <a href="" class="ayuda">?</a>
+        <a href="" class="ayuda paddingi5a2 displayn2">?</a>
+      </div>
+    </div>
+
+    <div class="box1 mt1">
+      <div class="inversion4">
+        <div class="box1 paddingr2">
+          <p class="widthp1">Tu retorno</p>
+          <p class="widthp2">Fecha de retorno</p>
+        </div>
+
+        <div class="box1 paddingr2">
+          <div class="inversion6">
+            <div class="inversion6b">
+              <h4>$6.500</h4>
+            </div>
+            <h4>20/06/2019</h4>
+          </div>
+        </div>
+      </div>
+      <div class="inversion5 paddingi5b">
+        <a href="" class="ayuda">?</a>
+      </div>
+    </div>
+
+    <div class="box1 mt1">
+      <div class="inversion4">
+        <div class="inversion4a paddingr3">
+          <p>¿Querés donarle a Sumatoria?</p>
+          <div class="box1">
+            <label class="container3">
+              <input type="checkbox" name="radio">
+              <span class="checkmark tr1"></span>
+            </label>
+            <select name="" id="" class="inversionselect2">
+              <option value="">%5</option>
+              <option value="">%10</option>
+              <option value="">%15</option>
+              <option value="">%20</option>
+              <option value="">%25</option>
+              <option value="">%30</option>
+              <option value="">%35</option>
+              <option value="">%40</option>
+              <option value="">%45</option>
+              <option value="">%50</option>
+              <option value="">%55</option>
+              <option value="">%60</option>
+              <option value="">%65</option>
+              <option value="">%70</option>
+              <option value="">%75</option>
+              <option value="">%80</option>
+              <option value="">%85</option>
+              <option value="">%90</option>
+              <option value="">%95</option>
+              <option value="">%100</option>
+            </select>
+            <a href="" class="ayuda displayn" style="margin-top:5px !important;">?</a>
+          </div>
+        </div>
+        <div class="inversion4b">
+          <p>Objetivos de desarrollo sostenible</p>
+          <div class="box1">
+            <div class="imginversion"><img src="/assets/img/inversion-01.png" alt=""></div>
+            <div class="imginversion"><img src="/assets/img/inversion-02.png" alt=""></div>
+            <div class="imginversion"><img src="/assets/img/inversion-03.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="inversion5 paddingi5c">
+        <a href="" class="ayuda displayn2">?</a>
+        <a href="" class="ayuda paddingi5c2">?</a>
+      </div>
+    </div>
+
+    <div class="box1 inversion7">
+      <div class="inversion7b">
+        <p>Inversión: $5000</p>
+        <p>Donación a Sumatoria: $250</p>
+        <hr>
+        <h3>Total: $5.250</h3>
+      </div>
+    </div>
+
+    <div class="box1 inversion8">
+      <div class="inversion8b">
+        <label class="container3">
+          <input type="checkbox" name="radio2">
+          <span class="checkmark tr2"></span>
+        </label>
+        <p>Acepto <a inlineHref="#modal1">Términos y Condiciones</a></p>
+      </div>
+      <a inlineHref="#modal2"><button class="btn7">Invertí</button></a>
+    </div>
+
+    <div class="box1 inversion9 displayn2">
+      <p>Compartilo para llegar a más personas</p>
+      <div class="boxredes3">
+        <div class="redesimg3"><img src="/assets/img/redes-01.png" alt=""></div>
+        <div class="redesimg3"><img src="/assets/img/redes-02.png" alt=""></div>
+        <div class="redesimg3"><img src="/assets/img/redes-03.png" alt=""></div>
+        <div class="redesimg3"><img src="/assets/img/redes-04.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="historia">
+  <h2>Conocé su historia</h2>
+  <p>Griselda empezó con su emprendimiento en San Miguel hace 2 años, cuando decidió dejar su puesto de administrativo
+    en una fábrica para trabajar en lo que más le gusta. Hoy decora tazas, cucharas y otros elementos para regalería</p>
+  <p>Su historia de inicio es bastante particular; Como ella siempre eligió comprar productos de meprendedores para
+    hacer regalos, asi fué que se acercó a una artesana que estaba interesada en vender su horno de vitrofusión. Se
+    decidió a hacer la inversión y asi se animó a comenzar su proyecto. Al principio conoció la técnica de verificación
+    y luego la definitiva que elegiría para sus trabajos; la de calcos vitrificables.</p>
+</section>
+
+<modal #share>
+  <modal-content>
+    <iframe [src]="linkModal" width="100%" height="500px"></iframe>
+  </modal-content>
+</modal>
+
+<div id="modal1" class="modal_mask">
+  <div class="box-modal1">
+    <div class="box1">
+      <a inlineHref="#"><img class="cerrarmodal" src="/assets/img/cerrar.png" alt=""></a>
+    </div>
+    <div class="box1">
+      <h2>Solicitud de adquisición de crédito</h2>
+      <p class="small1">Ciudad Autónoma de Buenos Aires, 23 de Enero de 2019</p>
+    </div>
+    <div class="box1">
+      <p style="margin-bottom:2px;"><strong>Estimado/a Lucas Morsellino</strong></p>
+      <p style="margin-bottom:38px;">De nuestra consideración:</p>
+      <p>De acuerdo con los Términos y Condiciones del Programa publicados en el Sitio, el Usuario registrado en el Sitio Web, mediante acceso a su cuenta con su nombre de usuario y contraseña, y que efectúa el click de aceptación al pie, se dirige al Administrador, en virtud del Mandato otorgado a éste por la IMF seleccionada por el Usuario que se indica en el encabezado de la presente, con el objeto de ofrecer a la IMF (a través del Administrador) la adquisición del Crédito seleccionado que se indica en el encabezado de la presente, en la proporción y con la tasa de interés que allí se indica. A tal ﬁn les hacemos llegar las condiciones sobre cuya base ofrecemos su contratación en virtud de los términos y condiciones detallados a continuación.</p>
+    </div>
+    <div class="box1">
+      <div class="detalles">
+        <h4>Detalles del préstamo</h4>
+        <p>Nombre de Inversor: <span>Lucas Morsellino </span></p>
+        <p>Nro de Crédito: <span>259</span></p>
+        <p>Microempresario: <span>Julia González </span></p>
+        <p>Microempremdimiento: <span>Mi Sacrificio</span></p>
+        <p>IMF: <span>Asociación Civil Nuestras Huellas </span></p>
+        <p>Proporción a Adquirir: <span>2,08 %</span></p>
+        <p>Valor Nominal a Adquirir: <span>$5.000</span></p>
+        <p>Tasa de Interés Nominal Anual (TNA): <span>30%</span></p>
+        <p>Tasa de Interés Efectiva (TEA): <span>30%</span></p>
+        <p>Plazo al vencimiento: <span>23/07/2019</span></p>
+        <p>Interés a recibir: <span>$1.500</span></p>
+        <p>Monto a devolver: <span>$6.500</span></p>
+      </div>
+    </div>
+    <div class="box1" style="margin-bottom:33px;">
+      <p style="margin-bottom:33px;">Todos los términos que comiencen con letra mayúscula y que no estuvieran deﬁnidos en la presente, tienen el signiﬁcado asignado a los mismos en los Términos y Condiciones del Programa.</p>
+      <p>1. Sujeto a los Términos y Condiciones del Programa y a las condiciones establecidas en la presente, y siempre y cuando esta Solicitud de Adquisición sea aceptada por el Administrador (por cuenta y orden de la IMF), el Usuario adquiere a la IMF el Crédito (por la proporción y tasa de interés indicadas en el encabezamiento de la presente) y ésta acepta venderlo (en dicha proporción) de plena conformidad.</p>
+      <p>2. El precio de adquisición del Crédito será el que se indica en el encabezado de la presente. La forma de pago del precio será la indicada en los Términos y Condiciones.</p>
+      <p>3. La recepción sin rechazo de dicho pago y la conﬁrmación, a través del Sitio, de la adquisición realizada, signiﬁcará la aceptación de todos los términos y condiciones de la presente Solicitud de Adquisición por el Administrador (en representación de la IMF).</p>
+      <p>4. El Usuario podrá efectuar una impresión de la conﬁrmación emitida por el Sitio y podrá conservar dicha constancia en su poder.</p>
+      <p>5. Previo a la emisión de esta Solicitud de Adquisición, el Usuario analizó el Crédito y el Microempresario y Microemprendimiento asociados, a través de la información publicada en el Sitio.</p>
+      <p>6. La cesión y adquisición del Crédito se regirá por los Términos y Condiciones aceptados por el Usuario al momento de registrarse en el Sitio, los cuales se encuentran publicados en el Sitio.</p>
+    </div>
+    <a inlineHref="#"><button class="btn8">Cerrar</button></a>
+  </div><!-- box-modal==== -->
+</div>	
+
+<div id="modal2" class="modal_mask">
+  <div class="box-modal2">
+    <div class="box1">
+      <a inlineHref="#"><img class="cerrarmodal" src="/assets/img/cerrar.png" alt=""></a>
+    </div>
+    <div class="box1">
+      <h2>Ya casi terminamos Lucas...</h2>
+      <p style="text-align:center;">Elegí por que medio queres realizar tu inversión.</p>
+    </div>
+    <div class="box1">
+      <div class="boxpago">
+        <div class="boxpagoindi">
+          <div class="pago"><a href=""><img src="/assets/img/pago-01.png" alt=""></a></div>
+          <p style="font-weight:600; margin-bottom:5px;">Mercado Pago</p>
+          <p style="font-size:10px;">Tarjetas credito - debito</p>
+        </div>
+        <p class="boxpagop">ó</p>
+        <div class="boxpagoindi">
+          <div class="pago"><a href=""><img src="/assets/img/pago-02.png" alt=""></a></div>
+          <p style="font-weight:600;">Transferencia bancaria(*)</p>
+        </div>
+      </div>
+    </div>
+    <div class="box1" style="margin-bottom:33px;">
+      <p style="font-size: 14px; line-height: 18px;">(*) La transferencia bancaria deberá ser realizada por el usuario a traves de la plataforma de homebanking de su banco. Una vez que ingrese el pago un email de conﬁmación notiﬁcará el exito de la trasnacción.</p>
+    </div>
+    <a inlineHref="#"><button class="btn8">Cerrar</button></a>
+  </div><!-- box-modal==== -->
+</div>
