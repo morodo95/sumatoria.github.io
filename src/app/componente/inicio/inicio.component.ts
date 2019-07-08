@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ClienteServicio } from 'src/app/servicio/cliente.servicio';
+import { MicroemprendimientoServicio } from 'src/app/servicio/microemprendimiento.servicio';
 
 @Component({
   selector: 'app-inicio',
@@ -8,20 +8,34 @@ import { ClienteServicio } from 'src/app/servicio/cliente.servicio';
 })
 export class InicioComponent implements OnInit {
 
-  proyectos: any[];
+  proyectos: any[] = [];
 
-  constructor(private clienteServicio: ClienteServicio) { }
+  constructor(private microemprendimientoServicio: MicroemprendimientoServicio) { }
 
   ngOnInit() {
-    this.clienteServicio.getClientes().subscribe((res: any[]) => {
-      this.proyectos = res;
-      console.log(res);
-    }, error => {
-      console.log(error);
-    })
+    this.obtenerMicroemprendimientos();
   }
 
   imagen(nombre: string) {
     return 'https://www.sumatoria.org/assets/images/microempresarios/thumbnails/' + nombre;
   }
+
+  obtenerMicroemprendimientos() {
+    let dataEmprendimiento: any = {id_micro: ''};
+    this.microemprendimientoServicio.getMicroemprendimiento('microemprendedores', dataEmprendimiento).subscribe(res =>{
+      let i = 0;
+      res['emprendimientosData'].forEach(proyecto => {
+        if (i < 3) {
+          this.proyectos.push(proyecto);
+        }
+        i++;
+      });
+      this.proyectos.forEach(proyecto => {
+        proyecto.descripcion = proyecto.descripcion.substring(0, 230) + '...';
+      });
+    }, error =>{
+      console.log(error)	
+    })
+  }
+
 }

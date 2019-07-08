@@ -15,20 +15,24 @@
     </div>
     <div class="footer1">
       <h2>NEWSLETTER</h2>
-      <form action="">
+      <!-- <form> -->
         <div class="box1">
           <input type="text" placeholder="Nombre completo">
           <input type="text" placeholder="Email">
         </div>
         <button class="btn5">Suscribite</button>
-      </form>
+      <!-- </form> -->
     </div>
     <div class="footer2 displayn">
       <div class="box1"><img class="logofooter" src="/assets/img/logofooter-01.png" alt=""></div>
-      <div class="box1">
+      <div class="box1" *ngIf="usuario == null">
         <div class="boxfooter">
-          <button class="btn5">Ingresar</button>
-          <button class="btn6">Registrate</button>
+          <a href="{{ path + '#login'}}">
+            <button class="btn5">Ingresar</button>
+          </a>
+          <a href="{{ path + '#registro'}}">
+            <button class="btn6">Registrate</button>
+          </a>
         </div>
       </div>
       <div class="box1">
@@ -54,3 +58,53 @@
     <div class="mn"><img src="/assets/img/mn.png" alt=""></div>
   </div>
 </footer>
+
+<div id="login" class="modal_mask">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="box-modal2">
+      <div class="box1">
+        <a href="{{ path + '#'}}"><img class="cerrarmodal" src="/assets/img/cerrar.png" alt=""></a>
+      </div>
+      <div class="box1">
+        <h2>Loguearse</h2>
+        <label>Email</label>
+        <input formControlName="email" type="email" placeholder="Ingrese su email">
+      </div>
+      <div class="box1">
+        <label>Contraseña</label>
+        <input formControlName="clave" type="password" placeholder="Ingrese su contraseña">
+      </div>
+      <button class="btn8" type="submit">Ingresar</button>
+      <a href="{{ path + '#registro'}}">Registrate</a>
+    </div>
+  </form>
+</div>
+
+<div id="registro" class="modal_mask">
+    <form [formGroup]="registroForm" (ngSubmit)="registrar()">
+      <div class="box-modal2">
+        <div class="box1">
+          <a href="{{ path + '#'}}"><img class="cerrarmodal" src="/assets/img/cerrar.png" alt=""></a>
+        </div>
+        <div class="box1">
+          <h2>Registrarse</h2>
+          <label>Nombre</label>
+          <input formControlName="nombre" type="text" placeholder="Ingrese su nombre">
+        </div>
+        <div class="box1">
+          <label>Apellido</label>
+          <input formControlName="apellido" type="text" placeholder="Ingrese su apellido">
+        </div>
+        <div class="box1">
+          <label>Email</label>
+          <input formControlName="email" type="email" placeholder="Ingrese su email">
+        </div>
+        <div class="box1">
+          <label>Contraseña</label>
+          <input formControlName="clave" type="password" placeholder="Ingrese su contraseña">
+        </div>
+        <button class="btn8" type="submit">Confirmar</button>
+        <a href="{{ path + '#login'}}">Loguearse</a>
+      </div>
+    </form>
+  </div>

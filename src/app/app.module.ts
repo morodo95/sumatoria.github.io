@@ -17,6 +17,7 @@ import { PerfilComponent } from './componente/perfil/perfil.component';
 import { ProyectosComponent } from './componente/proyectos/proyectos.component';
 import { InlineHrefDirective } from 'ng-inline-href';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserModule,
     ModalModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     InlineHrefDirective

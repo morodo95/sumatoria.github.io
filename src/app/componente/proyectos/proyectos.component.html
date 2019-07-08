@@ -24,115 +24,36 @@
         <li><label for="microcreditos">Microcréditos</label></li>
       </ul>
     </div>
-
     
     <div class="boxproyectos">
-      <article class="type-ambiental boxpindividual">
-
+      <article class="type-ambiental boxpindividual" *ngFor="let proyecto of proyectos">
           <h4>Nos faltan $12.000</h4>
-          <div class="barra"><div class="porcentaje"></div></div>
+          <div class="barra">
+            <div class="porcentaje"></div>
+          </div>
           <div class="pindividual">
-            <div class="imgproyecto"><img src="/assets/img/proyecto1.jpg" alt=""></div>
+            <div class="imgproyecto">
+              <img *ngIf="proyecto.foto_emprendimiento == ''" src="/assets/img/proyecto1.jpg" alt="">
+              <img *ngIf="proyecto.foto_emprendimiento != ''" [src]="imagen(proyecto.foto_emprendimiento)">
+            </div>
             <div class="textosproyectos">
-              <h2>Una máquina nueva para Griselda</h2>
-              <p>Griselda es costurera y necesita una nueva máquina para su taller para poder satisfacer la demanda creciente y poder incorporar a una persona. <span>Invertí en ella!</span></p>
+              <h2>{{ proyecto.nombre_comercio }}</h2>
+              <p *ngIf="proyecto.descripcion != null">
+                {{ proyecto.descripcion }} <span *ngIf="proyecto.sexo == 'F'">Invertí en ella!</span><span *ngIf="proyecto.sexo == 'M'">Invertí en él!</span>
+              </p>
+              <p *ngIf="proyecto.descripcion == null">
+                NO HAY DESCRIPCIÓN. <span *ngIf="proyecto.sexo == 'F'">Invertí en ella!</span><span *ngIf="proyecto.sexo == 'M'">Invertí en él!</span>
+              </p>
             </div>
             <div class="boxbtnp">
-              <button class="btn1">Conocé más</button>
+              <a href="/proyecto/{{ proyecto.id_micro }}">
+                <button class="btn1">Conocé más</button>
+              </a>
               <img src="/assets/img/corazon.png" alt="">
             </div>
           </div>
-
-      </article>
-      <article class="type-cultural boxpindividual">
-
-          <h4>Nos faltan $12.000</h4>
-          <div class="barra"><div class="porcentaje"></div></div>
-          <div class="pindividual">
-            <div class="imgproyecto"><img src="/assets/img/proyecto2.jpg" alt=""></div>
-            <div class="textosproyectos">
-              <h2>Cooperativa productora de paneles solares</h2>
-              <p>Griselda es costurera y necesita una nueva máquina para su taller para poder satisfacer la demanda creciente y poder incorporar a una persona. <strong>Invertí en ella!</strong></p>
-            </div>
-            <div class="boxbtnp">
-              <button class="btn1">Conocé más</button>
-              <img src="/assets/img/corazon.png" alt="">
-            </div>
-          </div>
-
-      </article>
-      <article class="type-social boxpindividual">
-
-          <h4>Nos faltan $12.000</h4>
-          <div class="barra"><div class="porcentaje"></div></div>
-          <div class="pindividual">
-            <div class="imgproyecto"><img src="/assets/img/proyecto3.jpg" alt=""></div>
-            <div class="textosproyectos">
-              <h2>Productos lacteos biodinámicos - Tandil</h2>
-              <p>Griselda es costurera y necesita una nueva máquina para su taller para poder satisfacer la demanda creciente y poder incorporar a una persona. <strong>Invertí en ella!</strong></p>
-            </div>
-            <div class="boxbtnp">
-              <button class="btn1">Conocé más</button>
-              <img src="/assets/img/corazon.png" alt="">
-            </div>
-          </div>
-
-      </article>
-      <article class="type-ambiental boxpindividual">
-
-          <h4>Nos faltan $12.000</h4>
-          <div class="barra"><div class="porcentaje"></div></div>
-          <div class="pindividual">
-            <div class="imgproyecto"><img src="/assets/img/proyecto1.jpg" alt=""></div>
-            <div class="textosproyectos">
-              <h2>Una máquina nueva para Griselda</h2>
-              <p>Griselda es costurera y necesita una nueva máquina para su taller para poder satisfacer la demanda creciente y poder incorporar a una persona. <span>Invertí en ella!</span></p>
-            </div>
-            <div class="boxbtnp">
-              <button class="btn1">Conocé más</button>
-              <img src="/assets/img/corazon.png" alt="">
-            </div>
-          </div>
-
-      </article>
-      <article class="type-cultural boxpindividual">
-
-          <h4>Nos faltan $12.000</h4>
-          <div class="barra"><div class="porcentaje"></div></div>
-          <div class="pindividual">
-            <div class="imgproyecto"><img src="/assets/img/proyecto2.jpg" alt=""></div>
-            <div class="textosproyectos">
-              <h2>Cooperativa productora de paneles solares</h2>
-              <p>Griselda es costurera y necesita una nueva máquina para su taller para poder satisfacer la demanda creciente y poder incorporar a una persona. <strong>Invertí en ella!</strong></p>
-            </div>
-            <div class="boxbtnp">
-              <button class="btn1">Conocé más</button>
-              <img src="/assets/img/corazon.png" alt="">
-            </div>
-          </div>
-
-      </article>
-      <article class="type-social boxpindividual">
-
-          <h4>Nos faltan $12.000</h4>
-          <div class="barra"><div class="porcentaje"></div></div>
-          <div class="pindividual">
-            <div class="imgproyecto"><img src="/assets/img/proyecto3.jpg" alt=""></div>
-            <div class="textosproyectos">
-              <h2>Productos lacteos biodinámicos - Tandil</h2>
-              <p>Griselda es costurera y necesita una nueva máquina para su taller para poder satisfacer la demanda creciente y poder incorporar a una persona. <strong>Invertí en ella!</strong></p>
-            </div>
-            <div class="boxbtnp">
-              <button class="btn1">Conocé más</button>
-              <img src="/assets/img/corazon.png" alt="">
-            </div>
-          </div>
-
       </article>
     </div>
-    
   </div>
-
-  
 
 </section>

@@ -69,10 +69,17 @@
           </div>
           <div class="textosproyectos">
             <h2>{{ proyecto.nombre_comercio }}</h2>
-            <p>{{ proyecto.descripcion }}<span>Invertí en ella!</span></p>
+            <p *ngIf="proyecto.descripcion != null">
+              {{ proyecto.descripcion }} <span *ngIf="proyecto.sexo == 'F'">Invertí en ella!</span><span *ngIf="proyecto.sexo == 'M'">Invertí en él!</span>
+            </p>
+            <p *ngIf="proyecto.descripcion == null">
+              NO HAY DESCRIPCIÓN. <span *ngIf="proyecto.sexo == 'F'">Invertí en ella!</span><span *ngIf="proyecto.sexo == 'M'">Invertí en él!</span>
+            </p>
           </div>
           <div class="boxbtnp">
-            <button class="btn1">Conocé más</button>
+            <a href="/proyecto/{{ proyecto.id_micro }}">
+              <button class="btn1">Conocé más</button>
+            </a>
             <img src="/assets/img/corazon.png" alt="">
           </div>
         </div>
@@ -81,7 +88,9 @@
   </div>
 
   <div class="box1 btnvmp">
-    <button class="btn4">Ver más proyectos</button>
+    <a href="/proyectos">
+      <button class="btn4">Ver más proyectos</button>
+    </a>
   </div>
 </section>
 
