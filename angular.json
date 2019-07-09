@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "sumatoria": {
-      "root": "",
+      "root": "sumatoria2",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
